@@ -20,5 +20,6 @@ offset_bottom = 40.0
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=559925075]
 position = Vector2(16, 17)
 target_position = Vector2(0, 114)
+collision_mask = 2
 collide_with_areas = true
 script = ExtResource("1_7p1mj")
