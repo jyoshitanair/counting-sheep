@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://brdh3mgen2810"]
 
-[ext_resource type="Script" uid="uid://bucfglsmhnutq" path="res://scripts/sheep.gd" id="1_t8l8v"]
+[ext_resource type="Script" uid="uid://bucfglsmhnutq" path="res://scripts/sheep.gd" id="1_3vyb7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gw4f6"]
 radius = 134.71451
@@ -8,8 +8,8 @@ radius = 134.71451
 [sub_resource type="CircleShape2D" id="CircleShape2D_t8l8v"]
 radius = 93.34345
 
-[node name="sheep" type="CharacterBody2D" unique_id=83584467 groups=["enemy"]]
-script = ExtResource("1_t8l8v")
+[node name="player" type="CharacterBody2D" unique_id=83584467 groups=["enemy"]]
+script = ExtResource("1_3vyb7")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1865529145]
 position = Vector2(-1, -1)
