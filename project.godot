@@ -21,14 +21,9 @@ Secrets="*uid://dmrapmgclm8aa"
 SilentWolf="*uid://cqs5mjrk4ckmn"
 Manager="*uid://cmy5ppe13dovi"
 
-[display]
-
-window/size/viewport_width=2400
-window/size/viewport_height=1350
-
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/gdserial-20693f74d2e656c9523fd5a9302b044dfd4f2f70/addons/gdserial/plugin.cfg", "res://addons/silent_wolf/plugin.cfg")
+enabled=PackedStringArray("res://addons/silent_wolf/plugin.cfg")
 
 [input]
 

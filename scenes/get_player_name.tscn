@@ -60,6 +60,7 @@ theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxFlat_peuhc")
 placeholder_text = "Name"
 alignment = 1
+max_length = 15
 drag_and_drop_selection_enabled = false
 
 [node name="Node2D" type="Node2D" parent="." unique_id=647012677]
