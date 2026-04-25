@@ -1,3 +1,7 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+scripts/Secrets.gd
+scripts/Secrets.gd.uid
+addons/gdserial-20693f74d2e656c9523fd5a9302b044dfd4f2f70/
+
