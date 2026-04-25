@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://ccyabhruuu8ws"]
+
+[ext_resource type="Script" uid="uid://cmu2a10etcvwi" path="res://scripts/summoners.gd" id="1_t80hu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_prqda"]
+size = Vector2(37, 36)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_af2vk"]
+size = Vector2(26, 27)
+
+[node name="summoners" type="StaticBody2D" unique_id=617399]
+script = ExtResource("1_t80hu")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=344994529]
+offset_left = -14.0
+offset_top = -11.0
+offset_right = 12.0
+offset_bottom = 16.0
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1474606077]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=12916567]
+position = Vector2(-1.5, 2)
+shape = SubResource("RectangleShape2D_prqda")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1785319319]
+position = Vector2(-1, 2.5)
+shape = SubResource("RectangleShape2D_af2vk")
