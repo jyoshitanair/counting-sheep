@@ -13,14 +13,12 @@ size = Vector2(20, 40)
 script = ExtResource("1_md0e3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=655540245]
-position = Vector2(25, 23)
+position = Vector2(20, 21)
 shape = SubResource("CircleShape2D_md0e3")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1633877141]
-offset_left = 5.0
-offset_top = 2.0
-offset_right = 45.0
-offset_bottom = 42.0
+offset_right = 40.0
+offset_bottom = 40.0
 color = Color(0, 0, 0, 1)
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=559925075]
@@ -33,5 +31,5 @@ script = ExtResource("1_7p1mj")
 [node name="detection" type="Area2D" parent="." unique_id=159776972]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detection" unique_id=2087568191]
-position = Vector2(56, 22)
+position = Vector2(52, 20)
 shape = SubResource("RectangleShape2D_md0e3")
