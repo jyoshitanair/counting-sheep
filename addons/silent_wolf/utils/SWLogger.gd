@@ -7,7 +7,7 @@ static func get_log_level():
 	if SilentWolf.config.has('log_level'):
 		log_level = SilentWolf.config.log_level
 	else:
-		error("Couldn't find SilentWolf.config.log_level, defaulting to 1") 
+		error("Couldn't find SilentWolf.config.log_level, defaulting to 1")
 	return log_level
 	
 static func error(text):

@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://drmonkploks5e"]
 
 [ext_resource type="PackedScene" uid="uid://clrt62i2vkoqa" path="res://scenes/background.tscn" id="1_yqeox"]
+[ext_resource type="PackedScene" uid="uid://di0p7mbeswc5a" path="res://scenes/get_player_name.tscn" id="2_vjb58"]
+[ext_resource type="FontFile" uid="uid://dd67wlv2t60it" path="res://assets/fonts/Sour_Gummy/SourGummy-VariableFont_wdth,wght.ttf" id="3_con2f"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vjb58"]
 
@@ -21,3 +23,26 @@ sprite_frames = SubResource("SpriteFrames_vjb58")
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="GetPlayerName" parent="." unique_id=35266102 instance=ExtResource("2_vjb58")]
+layout_mode = 1
+offset_left = -1.0
+offset_top = 202.0
+offset_right = -1.0
+offset_bottom = 202.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=357770517]
+layout_mode = 0
+offset_left = 123.0
+offset_top = 205.0
+offset_right = 1030.0
+offset_bottom = 361.0
+focus_mode = 2
+theme_override_fonts/normal_font = ExtResource("3_con2f")
+theme_override_font_sizes/normal_font_size = 120
+text = "Counting Sheep"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+selection_enabled = true
