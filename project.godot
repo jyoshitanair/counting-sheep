@@ -15,6 +15,10 @@ run/main_scene="uid://cgakm5utdg24a"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Secrets="*uid://dmrapmgclm8aa"
+
 [input]
 
 space={
