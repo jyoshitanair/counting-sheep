@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://di0p7mbeswc5a"]
+
+[ext_resource type="Script" uid="uid://cry1w25qvjb0o" path="res://scenes/get_player_name.gd" id="1_o01i7"]
+[ext_resource type="FontFile" uid="uid://dd67wlv2t60it" path="res://assets/fonts/Sour_Gummy/SourGummy-VariableFont_wdth,wght.ttf" id="2_qbrse"]
+[ext_resource type="Texture2D" uid="uid://57whivr16vmb" path="res://assets/images/button.png" id="3_peuhc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_peuhc"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 0.8117647, 0.8745098, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+corner_detail = 15
+
+[node name="GetPlayerName" type="Control" unique_id=35266102]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -4.0
+offset_right = 2.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o01i7")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1048629428]
+layout_mode = 0
+offset_left = 385.0
+offset_top = 343.0
+offset_right = 777.0
+offset_bottom = 372.0
+theme_override_fonts/normal_font = ExtResource("2_qbrse")
+theme_override_font_sizes/normal_font_size = 20
+text = "Enter Your Name:"
+scroll_active = false
+vertical_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="." unique_id=1372604106]
+layout_mode = 0
+offset_left = 385.0
+offset_top = 387.0
+offset_right = 680.0
+offset_bottom = 425.0
+theme_override_colors/font_color = Color(1, 0.7529412, 0.8392157, 1)
+theme_override_colors/font_placeholder_color = Color(0.8431842, 0.84318376, 0.84318376, 0.76862746)
+theme_override_fonts/font = ExtResource("2_qbrse")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_peuhc")
+placeholder_text = "Name"
+alignment = 1
+drag_and_drop_selection_enabled = false
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=124291608]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Sprite2D" parent="." unique_id=1472473457]
+position = Vector2(736.00006, 403)
+scale = Vector2(0.088698596, 0.0886986)
+texture = ExtResource("3_peuhc")

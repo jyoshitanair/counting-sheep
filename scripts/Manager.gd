@@ -5,9 +5,9 @@ var score = 0
 
 func _ready() -> void:
 	SilentWolf.configure({
-		"api_key": "API_KEY",
+		"api_key": Secrets.API_KEY,
 		"game_id": "countingsheep",
-		"log_level": "1",
+		"log_level": 1,
 	})
 
 	SilentWolf.configure_scores({
