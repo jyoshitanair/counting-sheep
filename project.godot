@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Secrets="*uid://dmrapmgclm8aa"
 SilentWolf="*uid://cqs5mjrk4ckmn"
+Manager="*uid://cmy5ppe13dovi"
 
 [editor_plugins]
 

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://drmonkploks5e"]
 
-[ext_resource type="Texture2D" uid="uid://c8645gkpibi38" path="res://assets/images/bg.png" id="1_yqeox"]
+[ext_resource type="PackedScene" uid="uid://clrt62i2vkoqa" path="res://scenes/background.tscn" id="1_yqeox"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vjb58"]
 
@@ -12,10 +12,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Bg" type="Sprite2D" parent="." unique_id=1321934121]
-position = Vector2(576, 324.00003)
-scale = Vector2(0.9158103, 0.9041096)
-texture = ExtResource("1_yqeox")
+[node name="background" parent="." unique_id=2100641337 instance=ExtResource("1_yqeox")]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1804592421]
 sprite_frames = SubResource("SpriteFrames_vjb58")

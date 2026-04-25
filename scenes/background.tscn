@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://clrt62i2vkoqa"]
 
+[ext_resource type="Texture2D" uid="uid://c8645gkpibi38" path="res://assets/images/bg.png" id="1_bkp1e"]
+
 [node name="background" type="Node2D" unique_id=2100641337]
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1586704946]
-offset_left = -19.0
-offset_top = -6.0
-offset_right = 1157.0
-offset_bottom = 655.0
+[node name="Bg" type="Sprite2D" parent="." unique_id=197711770]
+position = Vector2(575.00006, 324.00003)
+scale = Vector2(0.91818184, 0.9027397)
+texture = ExtResource("1_bkp1e")
