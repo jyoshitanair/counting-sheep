@@ -1,3 +1,17 @@
 [gd_scene format=3 uid="uid://brdh3mgen2810"]
 
-[node name="sheep" type="Node2D" unique_id=1507686613]
+[ext_resource type="Script" uid="uid://bucfglsmhnutq" path="res://scripts/sheep.gd" id="1_t8l8v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t8l8v"]
+size = Vector2(225, 185)
+
+[node name="sheep" type="Node2D" unique_id=1507686613 groups=["enemy"]]
+script = ExtResource("1_t8l8v")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1860090950]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1865529145]
+position = Vector2(102.5, 82.5)
+shape = SubResource("RectangleShape2D_t8l8v")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
