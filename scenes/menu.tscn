@@ -19,3 +19,8 @@ texture = ExtResource("1_yqeox")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1804592421]
 sprite_frames = SubResource("SpriteFrames_vjb58")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1466544022]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
