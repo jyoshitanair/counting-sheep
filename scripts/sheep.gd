@@ -28,13 +28,13 @@ func _physics_process(delta) -> void:
 		Manager.score = score
 		tree = get_tree()
 
-		var sw_result : Dictionary = await SilentWolf.Scores.save_score(Manager.player_name, Manager.score).sw_save_score_complete
-		print ("Score persisted successfully: " + str(sw_result.score_id))
+		SilentWolf.Scores.save_score(Manager.player_name, Manager.score).sw_save_score_complete
 		call_deferred("submit")
 		
 func submit() -> void:
-	if tree:
-		tree.change_scene_to_file("res://scenes/leaderboard.tscn")
+	if not is_inside_tree():
+		return
+	get_tree().change_scene_to_file("res://scenes/leaderboard.tscn")
 
 func _on_area_2d_mouse_entered() -> void:
 	print("hello")

@@ -6,7 +6,7 @@ func _ready() -> void:
 	
 	var sw_result: Dictionary = await SilentWolf.Scores.get_scores(0).sw_get_scores_complete
 	player_list_with_pos = sort_players_and_add_position(SilentWolf.Scores.scores)
-	add_player_to_grid(player_list_with_pos)
+	await add_player_to_grid(player_list_with_pos)
 	
 func add_player_to_grid(player_list):
 	var pos_vbox = VBoxContainer.new()
