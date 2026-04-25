@@ -6,6 +6,9 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_md0e3"]
 radius = 31.144823
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_md0e3"]
+size = Vector2(20, 40)
+
 [node name="enemy" type="CharacterBody2D" unique_id=1179791671]
 script = ExtResource("1_md0e3")
 
@@ -26,3 +29,9 @@ target_position = Vector2(0, 114)
 collision_mask = 2
 collide_with_areas = true
 script = ExtResource("1_7p1mj")
+
+[node name="detection" type="Area2D" parent="." unique_id=159776972]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detection" unique_id=2087568191]
+position = Vector2(56, 22)
+shape = SubResource("RectangleShape2D_md0e3")
