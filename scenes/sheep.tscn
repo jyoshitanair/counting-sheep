@@ -11,7 +11,7 @@ radius = 134.71451
 [node name="sheep" type="CharacterBody2D" unique_id=83584467 groups=["enemy"]]
 script = ExtResource("1_t8l8v")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=615281061]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=615281061 groups=["player_main"]]
 shape = SubResource("CircleShape2D_t8l8v")
 
 [node name="sheep" type="AnimatedSprite2D" parent="." unique_id=2104451989]

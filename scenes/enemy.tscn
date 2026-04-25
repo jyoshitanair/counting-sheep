@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cwfd13a3pgmcu"]
+
+[ext_resource type="Script" uid="uid://dhvcpe4l63wu2" path="res://scripts/raycast.gd" id="1_7p1mj"]
+[ext_resource type="Script" uid="uid://8uo2ndqoe51a" path="res://scripts/enemy.gd" id="1_md0e3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_md0e3"]
+radius = 31.144823
+
+[node name="enemy" type="CharacterBody2D" unique_id=1179791671]
+script = ExtResource("1_md0e3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=655540245]
+position = Vector2(18, 17)
+shape = SubResource("CircleShape2D_md0e3")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1633877141]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=559925075]
+position = Vector2(16, 17)
+target_position = Vector2(0, 114)
+collide_with_areas = true
+script = ExtResource("1_7p1mj")

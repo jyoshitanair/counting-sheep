@@ -1,11 +1,2 @@
 extends Node
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+var API_KEY = "1yl45Hjl4J77482Z2eskq1m8GttItB7b2aL50EhP"
