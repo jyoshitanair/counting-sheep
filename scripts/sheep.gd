@@ -10,7 +10,7 @@ func _ready() -> void:
 func _physics_process(delta) -> void:
 	if alive:
 		if Input.is_action_just_pressed("space"):
-			print("return to menu")
+			alive = false
 		if Input.is_action_pressed("up"):
 			print("up")
 			direction = Vector2(0,-1)
