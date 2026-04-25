@@ -3,6 +3,7 @@ var direction = Vector2(-1,0)
 var alive = true
 var score = 0
 const speed = 3000
+var tree
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	add_to_group("player")
@@ -25,8 +26,15 @@ func _physics_process(delta) -> void:
 		move_and_slide()
 	else:
 		Manager.score = score
-		get_tree().change_scene_to_file("res://scenes/leaderboard.tscn")
+		tree = get_tree()
+
+		var sw_result : Dictionary = await SilentWolf.Scores.save_score(Manager.player_name, Manager.score).sw_save_score_complete
+		print ("Score persisted successfully: " + str(sw_result.score_id))
+		call_deferred("submit")
 		
+func submit() -> void:
+	if tree:
+		tree.change_scene_to_file("res://scenes/leaderboard.tscn")
 
 func _on_area_2d_mouse_entered() -> void:
 	print("hello")

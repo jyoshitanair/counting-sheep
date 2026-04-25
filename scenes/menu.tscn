@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://drxcjee0graia"]
 
 [ext_resource type="PackedScene" uid="uid://clrt62i2vkoqa" path="res://scenes/background.tscn" id="1_yqeox"]
+[ext_resource type="Texture2D" uid="uid://57whivr16vmb" path="res://assets/images/button.png" id="2_g3eks"]
 [ext_resource type="Script" uid="uid://bqjpdkwg0qttk" path="res://scripts/menu.gd" id="2_mhnvy"]
 [ext_resource type="PackedScene" uid="uid://di0p7mbeswc5a" path="res://scenes/get_player_name.tscn" id="2_vjb58"]
 [ext_resource type="FontFile" uid="uid://dd67wlv2t60it" path="res://assets/fonts/Sour_Gummy/SourGummy-VariableFont_wdth,wght.ttf" id="3_con2f"]
+[ext_resource type="Texture2D" uid="uid://24p85x17dnwu" path="res://assets/images/hover_button.png" id="3_v86rl"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vjb58"]
 
@@ -21,16 +23,10 @@ mouse_filter = 1
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1804592421]
 sprite_frames = SubResource("SpriteFrames_vjb58")
 
-[node name="TextureButton" type="TextureButton" parent="." unique_id=1466544022]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("2_mhnvy")
-
 [node name="GetPlayerName" parent="." unique_id=35266102 instance=ExtResource("2_vjb58")]
 layout_mode = 1
-offset_top = 89.0
-offset_bottom = 89.0
+offset_top = 85.0
+offset_bottom = 85.0
 mouse_filter = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=357770517]
@@ -50,4 +46,16 @@ horizontal_alignment = 1
 vertical_alignment = 1
 selection_enabled = true
 
-[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]
+[node name="Node2D" type="Node2D" parent="." unique_id=1451010782]
+scale = Vector2(0.1, 0.1)
+
+[node name="TextureButton" type="TextureButton" parent="Node2D" unique_id=1466544022]
+offset_left = 6839.9995
+offset_top = 4489.9995
+offset_right = 8104.9995
+offset_bottom = 5219.9995
+texture_normal = ExtResource("2_g3eks")
+texture_hover = ExtResource("3_v86rl")
+script = ExtResource("2_mhnvy")
+
+[connection signal="pressed" from="Node2D/TextureButton" to="Node2D/TextureButton" method="_on_pressed"]
