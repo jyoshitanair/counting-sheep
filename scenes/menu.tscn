@@ -1,6 +1,7 @@
-[gd_scene format=3 uid="uid://drmonkploks5e"]
+[gd_scene format=3 uid="uid://drxcjee0graia"]
 
 [ext_resource type="PackedScene" uid="uid://clrt62i2vkoqa" path="res://scenes/background.tscn" id="1_yqeox"]
+[ext_resource type="Script" uid="uid://bqjpdkwg0qttk" path="res://scripts/menu.gd" id="2_mhnvy"]
 [ext_resource type="PackedScene" uid="uid://di0p7mbeswc5a" path="res://scenes/get_player_name.tscn" id="2_vjb58"]
 [ext_resource type="FontFile" uid="uid://dd67wlv2t60it" path="res://assets/fonts/Sour_Gummy/SourGummy-VariableFont_wdth,wght.ttf" id="3_con2f"]
 
@@ -23,6 +24,7 @@ sprite_frames = SubResource("SpriteFrames_vjb58")
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("2_mhnvy")
 
 [node name="GetPlayerName" parent="." unique_id=35266102 instance=ExtResource("2_vjb58")]
 layout_mode = 1
@@ -46,3 +48,5 @@ scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
 selection_enabled = true
+
+[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]
