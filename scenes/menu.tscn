@@ -1,10 +1,9 @@
 [gd_scene format=3 uid="uid://drxcjee0graia"]
 
 [ext_resource type="PackedScene" uid="uid://clrt62i2vkoqa" path="res://scenes/background.tscn" id="1_yqeox"]
+[ext_resource type="Texture2D" uid="uid://detcump8b3p85" path="res://assets/images/extra_cloud.png" id="2_mhnvy"]
 [ext_resource type="PackedScene" uid="uid://di0p7mbeswc5a" path="res://scenes/get_player_name.tscn" id="2_vjb58"]
 [ext_resource type="FontFile" uid="uid://dd67wlv2t60it" path="res://assets/fonts/Sour_Gummy/SourGummy-VariableFont_wdth,wght.ttf" id="3_con2f"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_vjb58"]
 
 [node name="Control" type="Control" unique_id=1281850131]
 layout_mode = 3
@@ -17,8 +16,25 @@ mouse_filter = 1
 
 [node name="background" parent="." unique_id=2100641337 instance=ExtResource("1_yqeox")]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1804592421]
-sprite_frames = SubResource("SpriteFrames_vjb58")
+[node name="ExtraCloud" type="Sprite2D" parent="." unique_id=1630338136]
+position = Vector2(150, 506)
+scale = Vector2(0.41151133, 0.36637416)
+texture = ExtResource("2_mhnvy")
+
+[node name="ExtraCloud2" type="Sprite2D" parent="." unique_id=1881713578]
+position = Vector2(978.00006, 535)
+scale = Vector2(0.2903803, 0.25852954)
+texture = ExtResource("2_mhnvy")
+
+[node name="ExtraCloud3" type="Sprite2D" parent="." unique_id=964231924]
+position = Vector2(766, 458)
+scale = Vector2(0.42060474, 0.37447017)
+texture = ExtResource("2_mhnvy")
+
+[node name="ExtraCloud4" type="Sprite2D" parent="." unique_id=648771230]
+position = Vector2(298.17166, 370.15924)
+scale = Vector2(0.199532, 0.17764609)
+texture = ExtResource("2_mhnvy")
 
 [node name="GetPlayerName" parent="." unique_id=35266102 instance=ExtResource("2_vjb58")]
 layout_mode = 1
