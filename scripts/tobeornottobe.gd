@@ -14,8 +14,9 @@ func _ready():
 
 func _process(_delta):
 	if serial and serial.is_open() and serial.bytes_avaialable() >0:
-		var bytes = serial.read(serial.bytes_available())
-		var chunk = bytes.get_string_from_utf8()
+		var chunk = serial.read_string(64) # ✔ correct
+		if chunk == "":
+			return
 		buffer += chunk
 		if "\n" in buffer:
 			var lines = buffer.split("\n")
