@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://brdh3mgen2810"]
+[gd_scene format=3 uid="uid://dcay6yyi1un6k"]
 
 [ext_resource type="Script" uid="uid://bucfglsmhnutq" path="res://scripts/sheep.gd" id="1_3vyb7"]
 [ext_resource type="Texture2D" uid="uid://b3a20ah5p2u85" path="res://assets/images/frames/bun_down1.png" id="2_jej6c"]
@@ -14,11 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://bdw53vqoah6fs" path="res://assets/images/frames/bun_up2.png" id="12_4ni07"]
 [ext_resource type="Texture2D" uid="uid://bbne5sgbud44r" path="res://assets/images/frames/bun_up3.png" id="13_l71n6"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_gw4f6"]
-radius = 134.71451
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_t8l8v"]
-radius = 93.34345
+[sub_resource type="CircleShape2D" id="CircleShape2D_3vyb7"]
+radius = 30.016663
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ke2ow"]
 animations = [{
@@ -82,15 +79,12 @@ animations = [{
 [node name="player" type="CharacterBody2D" unique_id=83584467 groups=["enemy"]]
 script = ExtResource("1_3vyb7")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1865529145]
-position = Vector2(-1, -1)
-shape = SubResource("CircleShape2D_gw4f6")
-
 [node name="area" type="Area2D" parent="." unique_id=1860090950 groups=["player_main"]]
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area" unique_id=615281061]
-shape = SubResource("CircleShape2D_t8l8v")
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_3vyb7")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1751229892]
 offset_left = -20.0
