@@ -19,12 +19,6 @@ distance = -615.1479
 normal = Vector2(0.99986994, -0.016126934)
 distance = -535.55945
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sugp2"]
-size = Vector2(23.957642, 271.60498)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jyhfs"]
-size = Vector2(145.59744, 24.028389)
-
 [node name="main" type="Node2D" unique_id=1957497060]
 
 [node name="background" parent="." unique_id=2100641337 instance=ExtResource("1_0wfyh")]
@@ -53,26 +47,5 @@ shape = SubResource("WorldBoundaryShape2D_o6xl0")
 [node name="enemy" parent="." unique_id=1179791671 instance=ExtResource("3_sugp2")]
 position = Vector2(613, 230)
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1469836401]
-position = Vector2(711, 244)
-shape = SubResource("RectangleShape2D_sugp2")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=202940227]
-position = Vector2(528, 449)
-shape = SubResource("RectangleShape2D_sugp2")
-
 [node name="Area2D" type="Area2D" parent="." unique_id=850031915]
 scale = Vector2(-1.5506353, 5.2940903)
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D" unique_id=278099973]
-position = Vector2(-842.8801, 120.13394)
-rotation = -0.12916188
-scale = Vector2(5.498975, 0.15607971)
-skew = 0.808545
-shape = SubResource("RectangleShape2D_jyhfs")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D" unique_id=96042062]
-position = Vector2(-496.5706, 95.95605)
-rotation = 2.9914942
-scale = Vector2(2.3580263, -0.32648522)
-shape = SubResource("RectangleShape2D_jyhfs")

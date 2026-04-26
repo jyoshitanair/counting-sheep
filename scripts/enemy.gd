@@ -10,7 +10,7 @@ func _ready() -> void:
 	player=get_tree().get_first_node_in_group("player") 
 
 func _physics_process(delta: float) -> void:
-	var current_pos = global_position	
+	
 	if player and player.alive and raycast.can_see:
 	# check wall, then chase, if wall - turn
 		var starts = detection.get_overlapping_bodies()
@@ -41,7 +41,7 @@ func _physics_process(delta: float) -> void:
 				
 				
 				move_and_slide()
-					
+		var current_pos = global_position	
 				
 				
 			
