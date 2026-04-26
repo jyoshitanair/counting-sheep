@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vm6jqm8fxce7"
-path="res://.godot/imported/colour-tileset.jpg-4a0c0063ba2f77ff1e1c0ec37d78919a.ctex"
+uid="uid://b318ptvpkma5d"
+path="res://.godot/imported/please.iwannagohome.jpg-33ba77baed87cc12cf0b58c8bab6f490.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/tileset/colour-tileset.jpg"
-dest_files=["res://.godot/imported/colour-tileset.jpg-4a0c0063ba2f77ff1e1c0ec37d78919a.ctex"]
+source_file="res://assets/images/tileset/please.iwannagohome.jpg"
+dest_files=["res://.godot/imported/please.iwannagohome.jpg-33ba77baed87cc12cf0b58c8bab6f490.ctex"]
 
 [params]
 
