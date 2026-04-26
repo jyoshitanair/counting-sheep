@@ -11,7 +11,11 @@ config_version=5
 [application]
 
 config/name="counting_sheep"
-run/main_scene="uid://drxcjee0graia"
+<<<<<<< HEAD
+run/main_scene="uid://drmonkploks5e"
+=======
+run/main_scene="uid://cgakm5utdg24a"
+>>>>>>> 5fbe5458712d8960b11d60ed5c385afb67473768
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 

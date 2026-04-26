@@ -2,5 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bj5fiy4cbm0ft" path="res://scripts/tobeornottobe.gd" id="1_qnhiu"]
 
+[ext_resource type="Script" uid="uid://bktkgjpqocp3t" path="res://scenes/tobeornottobe.gd" id="1_qnhiu"]
+
 [node name="tobeornottobe" type="Node2D" unique_id=42209921]
 script = ExtResource("1_qnhiu")
