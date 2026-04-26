@@ -1,12 +1,83 @@
 [gd_scene format=3 uid="uid://brdh3mgen2810"]
 
 [ext_resource type="Script" uid="uid://bucfglsmhnutq" path="res://scripts/sheep.gd" id="1_3vyb7"]
+[ext_resource type="Texture2D" uid="uid://b3a20ah5p2u85" path="res://assets/images/frames/bun_down1.png" id="2_jej6c"]
+[ext_resource type="Texture2D" uid="uid://dtjplilkk80e2" path="res://assets/images/frames/bun_down2.png" id="3_f1ej7"]
+[ext_resource type="Texture2D" uid="uid://cmcy2gcay7s7y" path="res://assets/images/frames/bun_down3.png" id="4_oprun"]
+[ext_resource type="Texture2D" uid="uid://2w3ndk3gato5" path="res://assets/images/frames/Bun_left1.png" id="5_a8ls1"]
+[ext_resource type="Texture2D" uid="uid://dxih8dyrd7g8c" path="res://assets/images/frames/Bun_left2.png" id="6_qfm1y"]
+[ext_resource type="Texture2D" uid="uid://xxovuerm4b5i" path="res://assets/images/frames/Bun_left3.png" id="7_fulsm"]
+[ext_resource type="Texture2D" uid="uid://emn74t0w55do" path="res://assets/images/frames/Bun_right1.png" id="8_4r5pv"]
+[ext_resource type="Texture2D" uid="uid://smabtp8j0cyp" path="res://assets/images/frames/Bun_right2.png" id="9_60mlk"]
+[ext_resource type="Texture2D" uid="uid://dfdb4kui8cmmf" path="res://assets/images/frames/Bun_right3.png" id="10_i4ail"]
+[ext_resource type="Texture2D" uid="uid://dnknraij0qjy0" path="res://assets/images/frames/bun_up1.png" id="11_a38lo"]
+[ext_resource type="Texture2D" uid="uid://bdw53vqoah6fs" path="res://assets/images/frames/bun_up2.png" id="12_4ni07"]
+[ext_resource type="Texture2D" uid="uid://bbne5sgbud44r" path="res://assets/images/frames/bun_up3.png" id="13_l71n6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gw4f6"]
 radius = 134.71451
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_t8l8v"]
 radius = 93.34345
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ke2ow"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_jej6c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_f1ej7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_oprun")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_a8ls1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qfm1y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_fulsm")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_4r5pv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_60mlk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_i4ail")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_a38lo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_4ni07")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_l71n6")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]
 
 [node name="player" type="CharacterBody2D" unique_id=83584467 groups=["enemy"]]
 script = ExtResource("1_3vyb7")
@@ -28,5 +99,7 @@ offset_right = 20.0
 offset_bottom = 19.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1255392553]
+sprite_frames = SubResource("SpriteFrames_ke2ow")
+animation = &"right"
 
 [connection signal="mouse_entered" from="area" to="." method="_on_area_2d_mouse_entered"]
