@@ -20,3 +20,4 @@ func _physics_process(delta: float) -> void:
 func leaderboard():
 	for score in Manager.score:
 		Manager.player_list.append(Manager.player_name)
+		print("scoreeddd")
