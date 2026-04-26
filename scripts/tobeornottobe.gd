@@ -1,51 +1,23 @@
 extends Node
 
-var udp := PacketPeerUDP.new()
-var x := 512
-var y := 512
-var b := 1
+var serial: GdSerial
 
 func _ready():
-	var err = udp.bind(4242)
-	if err == OK:
-		print("UDP listening on 4242")
-	else:
-		print("UDP bind FAILED: ", err)
+	serial = GdSerial.new()
 
-func _process(_delta):
-	while udp.get_available_packet_count() > 0:
-		var data = udp.get_packet().get_string_from_ascii().strip_edges()
-		if data.begins_with("X:"):
-			x = data.substr(2).to_int()
-		elif data.begins_with("Y:"):
-			y = data.substr(2).to_int()
-		elif data.begins_with("B:"):
-			b = data.substr(2).to_int()
+	serial.set_port("COM3")
+	serial.set_baud_rate(9600)
 
-	# X movement
-	if x < 400:
-		Input.action_press("left")
-		Input.action_release("right")
-	elif x > 800:
-		Input.action_press("right")
-		Input.action_release("left")
-	else:
-		Input.action_release("left")
-		Input.action_release("right")
+	if serial.open():
+		print("Connected to COM3")
 
-	# Y movement
-	if y < 400:
-		Input.action_press("up")
-		Input.action_release("down")
-	elif y > 800:
-		Input.action_press("down")
-		Input.action_release("up")
-	else:
-		Input.action_release("up")
-		Input.action_release("down")
+		# Give Arduino time to reset
+		await get_tree().create_timer(2.0).timeout
 
-	# Button
-	if b == 0:
-		Input.action_press("clicker")
 	else:
-		Input.action_release("clicker")
+		print("FAILED to open COM3")
+
+func _process(delta):
+	if serial and serial.bytes_available() > 0:
+		var data = serial.read_string(100)
+		print("Received:", data)

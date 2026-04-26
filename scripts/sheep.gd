@@ -21,6 +21,7 @@ func _physics_process(delta) -> void:
 			
 			
 		if Input.is_action_pressed("down"):
+			print("down")
 			direction = Vector2(0,1)
 			sprite.play("down")
 		if Input.is_action_pressed("left"):

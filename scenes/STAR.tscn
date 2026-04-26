@@ -1,13 +1,12 @@
-[gd_scene format=3 uid="uid://d02dbbrovdxv8"]
+[gd_scene format=3 uid="uid://nqp6gbfa8put"]
 
-[ext_resource type="Script" path="res://scripts/stars.gd" id="1_0obiv"]
-[ext_resource type="Texture2D" path="res://assets/images/stars/star.png" id="2_a5327"]
+[ext_resource type="Texture2D" uid="uid://bv0ocuulukob1" path="res://assets/images/stars.png" id="1_5enym"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cr20g"]
 radius = 11.045361
 
 [node name="star" type="Area2D" unique_id=1556527599]
-script = ExtResource("1_0obiv")
+rotation = -0.210941
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1338883883]
 position = Vector2(28, 24)
@@ -16,6 +15,10 @@ shape = SubResource("CircleShape2D_cr20g")
 [node name="Star" type="Sprite2D" parent="." unique_id=319115258]
 position = Vector2(26, 25.5)
 scale = Vector2(0.03561644, -0.0369863)
-texture = ExtResource("2_a5327")
+
+[node name="Stars" type="Sprite2D" parent="." unique_id=1185565832]
+position = Vector2(25.775566, 22.904587)
+scale = Vector2(0.0371869, 0.039669283)
+texture = ExtResource("1_5enym")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
