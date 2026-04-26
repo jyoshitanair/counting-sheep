@@ -58,13 +58,13 @@ vertical_alignment = 1
 
 [node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1013461361]
 layout_mode = 1
-anchors_preset = 13
-anchor_left = 0.5
-anchor_right = 0.5
+anchors_preset = -1
+anchor_left = 0.40300003
+anchor_right = 0.48000002
 anchor_bottom = 1.0
-offset_left = -332.0
+offset_left = -220.25604
 offset_top = 77.0
-offset_right = 286.0
+offset_right = 309.03998
 offset_bottom = -20.0
 grow_horizontal = 2
 grow_vertical = 2

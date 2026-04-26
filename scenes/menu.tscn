@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://drxcjee0graia"]
+[gd_scene format=3 uid="uid://drmonkploks5e"]
 
 [ext_resource type="PackedScene" uid="uid://clrt62i2vkoqa" path="res://scenes/background.tscn" id="1_yqeox"]
 [ext_resource type="Texture2D" uid="uid://detcump8b3p85" path="res://assets/images/extra_cloud.png" id="2_mhnvy"]

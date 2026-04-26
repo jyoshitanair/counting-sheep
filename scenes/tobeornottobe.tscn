@@ -1,3 +1,6 @@
 [gd_scene format=3 uid="uid://hbciwvbupwfo"]
 
+[ext_resource type="Script" uid="uid://bktkgjpqocp3t" path="res://scenes/tobeornottobe.gd" id="1_qnhiu"]
+
 [node name="tobeornottobe" type="Node2D" unique_id=42209921]
+script = ExtResource("1_qnhiu")

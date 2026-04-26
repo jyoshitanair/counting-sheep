@@ -3,6 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://cdy01bc8a8eer" path="res://scenes/world.tscn" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://brdh3mgen2810" path="res://scenes/player.tscn" id="2_sugp2"]
 [ext_resource type="PackedScene" uid="uid://cwfd13a3pgmcu" path="res://scenes/enemy.tscn" id="3_sugp2"]
+[ext_resource type="PackedScene" uid="uid://ccyabhruuu8ws" path="res://scenes/summoners.tscn" id="5_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://d02dbbrovdxv8" path="res://scenes/STAR.tscn" id="5_tefeu"]
+[ext_resource type="AudioStream" uid="uid://buk7llaa7qw7" path="res://assets/images/music/music.wav" id="6_tefeu"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jyhfs"]
 normal = Vector2(0.018178813, 0.9998348)
@@ -24,7 +27,7 @@ distance = -535.55945
 [node name="world" parent="." unique_id=1846603618 instance=ExtResource("1_sugp2")]
 
 [node name="sheep" parent="." unique_id=1507686613 instance=ExtResource("2_sugp2")]
-position = Vector2(168, 205)
+position = Vector2(113, 307)
 
 [node name="boundaries" type="StaticBody2D" parent="." unique_id=929530660]
 position = Vector2(536, -21)
@@ -44,7 +47,25 @@ shape = SubResource("WorldBoundaryShape2D_tefeu")
 shape = SubResource("WorldBoundaryShape2D_o6xl0")
 
 [node name="enemy" parent="." unique_id=1179791671 instance=ExtResource("3_sugp2")]
-position = Vector2(613, 230)
+position = Vector2(440, 480)
 
-[node name="Area2D" type="Area2D" parent="." unique_id=850031915]
-scale = Vector2(-1.5506353, 5.2940903)
+[node name="stars" type="Node2D" parent="." unique_id=1563964792]
+
+[node name="star" parent="stars" unique_id=1556527599 instance=ExtResource("5_tefeu")]
+position = Vector2(487.00003, 409)
+
+[node name="star2" parent="stars" unique_id=315077049 instance=ExtResource("5_tefeu")]
+position = Vector2(970, 83)
+
+[node name="star3" parent="stars" unique_id=2099511065 instance=ExtResource("5_tefeu")]
+position = Vector2(986.00006, 306.00003)
+
+[node name="sheeps" type="Node2D" parent="." unique_id=569939517]
+
+[node name="summoners" parent="sheeps" unique_id=617399 instance=ExtResource("5_tbgi4")]
+position = Vector2(200, 588)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=947340898]
+stream = ExtResource("6_tefeu")
+autoplay = true
+playback_type = 1
