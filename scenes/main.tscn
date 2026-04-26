@@ -3,8 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://cdy01bc8a8eer" path="res://scenes/world.tscn" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://brdh3mgen2810" path="res://scenes/player.tscn" id="2_sugp2"]
 [ext_resource type="PackedScene" uid="uid://cwfd13a3pgmcu" path="res://scenes/enemy.tscn" id="3_sugp2"]
-[ext_resource type="PackedScene" uid="uid://hbciwvbupwfo" path="res://scenes/tobeornottobe.tscn" id="4_jyhfs"]
-[ext_resource type="PackedScene" uid="uid://d02dbbrovdxv8" path="res://scenes/STAR.tscn" id="5_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://3t51s6mgo7g2" path="res://scenes/tobeornottobe.tscn" id="4_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://nqp6gbfa8put" path="res://scenes/STAR.tscn" id="5_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://ccyabhruuu8ws" path="res://scenes/summoners.tscn" id="6_tefeu"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jyhfs"]
@@ -27,7 +27,7 @@ distance = -535.55945
 [node name="world" parent="." unique_id=1846603618 instance=ExtResource("1_sugp2")]
 
 [node name="sheep" parent="." unique_id=1507686613 instance=ExtResource("2_sugp2")]
-position = Vector2(22, 260)
+position = Vector2(-3, 135)
 
 [node name="boundaries" type="StaticBody2D" parent="." unique_id=929530660]
 position = Vector2(536, -21)
@@ -51,16 +51,28 @@ position = Vector2(559, 235)
 
 [node name="tobeornottobe" parent="." unique_id=42209921 instance=ExtResource("4_jyhfs")]
 
-[node name="summoners" parent="." unique_id=617399 instance=ExtResource("6_tefeu")]
-position = Vector2(946, 58)
-
 [node name="starss" type="Node2D" parent="." unique_id=536570856]
 
 [node name="star" parent="starss" unique_id=1556527599 instance=ExtResource("5_tbgi4")]
-position = Vector2(855, 346)
+position = Vector2(982, 26)
 
 [node name="star2" parent="starss" unique_id=1500762032 instance=ExtResource("5_tbgi4")]
-position = Vector2(467, 173)
+position = Vector2(352, 55)
 
 [node name="star3" parent="starss" unique_id=1711163872 instance=ExtResource("5_tbgi4")]
-position = Vector2(284, 487)
+position = Vector2(269, 332)
+
+[node name="sheeps" type="Node2D" parent="." unique_id=381128207]
+
+[node name="summoners" parent="sheeps" unique_id=617399 instance=ExtResource("6_tefeu")]
+position = Vector2(891, 102)
+
+[node name="summoners2" parent="sheeps" unique_id=362395537 instance=ExtResource("6_tefeu")]
+position = Vector2(961, 538)
+
+[node name="summoners3" parent="sheeps" unique_id=2025287667 instance=ExtResource("6_tefeu")]
+position = Vector2(190, 540)
+
+[connection signal="body_entered" from="sheeps/summoners" to="sheeps/summoners" method="_on_body_entered"]
+[connection signal="body_entered" from="sheeps/summoners2" to="sheeps/summoners2" method="_on_body_entered"]
+[connection signal="body_entered" from="sheeps/summoners3" to="sheeps/summoners3" method="_on_body_entered"]

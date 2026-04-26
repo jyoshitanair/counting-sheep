@@ -93,8 +93,8 @@ position = Vector2(242, 55)
 shape = SubResource("RectangleShape2D_md0e3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1310728130]
-position = Vector2(215, 63)
-scale = Vector2(0.24863015, 0.17071918)
+position = Vector2(216.99998, 68.00001)
+scale = Vector2(0.2297945, 0.21686645)
 sprite_frames = SubResource("SpriteFrames_md0e3")
 animation = &"down"
 
