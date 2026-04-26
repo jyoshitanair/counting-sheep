@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cdy01bc8a8eer" path="res://scenes/world.tscn" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://brdh3mgen2810" path="res://scenes/player.tscn" id="2_sugp2"]
 [ext_resource type="PackedScene" uid="uid://cwfd13a3pgmcu" path="res://scenes/enemy.tscn" id="3_sugp2"]
+[ext_resource type="PackedScene" uid="uid://3t51s6mgo7g2" path="res://scenes/tobeornottobe.tscn" id="4_jyhfs"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jyhfs"]
 normal = Vector2(0.018178813, 0.9998348)
@@ -46,5 +47,4 @@ shape = SubResource("WorldBoundaryShape2D_o6xl0")
 [node name="enemy" parent="." unique_id=1179791671 instance=ExtResource("3_sugp2")]
 position = Vector2(613, 230)
 
-[node name="Area2D" type="Area2D" parent="." unique_id=850031915]
-scale = Vector2(-1.5506353, 5.2940903)
+[node name="tobeornottobe" parent="." unique_id=42209921 instance=ExtResource("4_jyhfs")]

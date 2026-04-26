@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="counting_sheep"
-run/main_scene="uid://cgakm5utdg24a"
+run/main_scene="uid://drxcjee0graia"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -45,6 +45,10 @@ left={
 "events": []
 }
 right={
+"deadzone": 0.2,
+"events": []
+}
+clicker={
 "deadzone": 0.2,
 "events": []
 }
