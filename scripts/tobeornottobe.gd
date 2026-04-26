@@ -44,7 +44,7 @@ func process_serial_data(data: String):
 	if y< 400: 
 		Input.action_press("up") 
 		Input.action_release("down")
-	if y > 800: 
+	elif y > 800: 
 		Input.action_press("down") 
 		Input.action_release("up")
 	else:
