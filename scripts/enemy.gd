@@ -1,18 +1,20 @@
 extends CharacterBody2D
 var player 
-const SPEED = 300.0
+const SPEED = 350.0
 const JUMP_VELOCITY = -400.0
 @onready var raycast: RayCast2D = $RayCast2D
 @onready var detection: Area2D = $detection
 var direction = Vector2.LEFT
 
 func _ready() -> void:
-	player=get_tree().get_first_node_in_group("player")
+	player=get_tree().get_first_node_in_group("player") 
 
 func _physics_process(delta: float) -> void:
+	var current_pos = global_position	
 	if player and player.alive and raycast.can_see:
 	# check wall, then chase, if wall - turn
 		var starts = detection.get_overlapping_bodies()
+		
 		
 		for e in starts:
 			if e.is_in_group("tiles"):
@@ -42,7 +44,8 @@ func _physics_process(delta: float) -> void:
 					
 				
 				
-				
+			
+	
 				
 				
 		
