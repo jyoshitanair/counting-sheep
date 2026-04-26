@@ -1,29 +1,31 @@
 extends Node
 
 var serial: GdSerial
-var buffer: String = ""
+var buffer := ""
+
 func _ready():
 	serial = GdSerial.new()
 	serial.set_port("COM3")
 	serial.set_baud_rate(9600)
 	if serial.open():
 		print("Connected to COM3")
-		await get_tree().create_timer(2.0).timeout
 	else:
 		print("FAILED to open COM3")
 
 func _process(_delta):
-	if serial and serial.is_open() and serial.bytes_avaialable() >0:
-		var chunk = serial.read_string(64) # ✔ correct
-		if chunk == "":
-			return
-		buffer += chunk
-		if "\n" in buffer:
-			var lines = buffer.split("\n")
-			buffer = lines[-1]
-			var data = lines[0].strip_edges()
-			if data != "":
-				process_serial_data(data)
+	if not serial:
+		return
+	var chunk = serial.read_string(16)  # smaller = safer
+	if chunk == null:
+		return
+	buffer += chunk
+	if buffer.length() > 5000:
+		buffer = buffer.right(2000)
+	while buffer.find("\n") != -1:
+		var pos = buffer.find("\n")
+		var line = buffer.substr(0, pos)
+		buffer = buffer.substr(pos + 1)
+		process_serial_data(line.strip_edges())
 
 func process_serial_data(data: String):
 	var parts = data.split(",")
@@ -31,7 +33,7 @@ func process_serial_data(data: String):
 		return
 	var x = parts[1].to_int()
 	var y = parts[0].to_int()
-	var b = parts[2].to_int() 
+	var b = parts[2].to_int()
 	#x movment 
 	if x< 400: 
 		Input.action_press("right") 
@@ -57,5 +59,3 @@ func process_serial_data(data: String):
 		Input.action_press("clicker") 
 	else:
 		Input.action_release("clicker") 
-	
-		
