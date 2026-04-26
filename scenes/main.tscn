@@ -58,7 +58,7 @@ position = Vector2(711, 244)
 shape = SubResource("RectangleShape2D_sugp2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=202940227]
-position = Vector2(514, 448)
+position = Vector2(528, 449)
 shape = SubResource("RectangleShape2D_sugp2")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=850031915]

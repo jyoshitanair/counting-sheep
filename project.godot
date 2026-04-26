@@ -23,7 +23,7 @@ Manager="*uid://cmy5ppe13dovi"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/silent_wolf/plugin.cfg")
+enabled=PackedStringArray("res://addons/gdserial/plugin.cfg", "res://addons/silent_wolf/plugin.cfg")
 
 [input]
 
