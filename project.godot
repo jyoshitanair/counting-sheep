@@ -18,9 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 Secrets="*uid://dmrapmgclm8aa"
-SilentWolf="*uid://cqs5mjrk4ckmn"
 Manager="*uid://cmy5ppe13dovi"
-Music="*uid://dwr12j6xha5np"
+SilentWolf="*uid://cqs5mjrk4ckmn"
 
 [editor_plugins]
 
@@ -49,11 +48,11 @@ right={
 "deadzone": 0.2,
 "events": []
 }
-arduino={
+clicker={
 "deadzone": 0.2,
 "events": []
 }
-clicker={
+arduino={
 "deadzone": 0.2,
 "events": []
 }

@@ -13,8 +13,9 @@ func _ready():
 		print("FAILED to open COM3")
 
 func _process(_delta):
-	if serial and serial.is_open() and serial.bytes_available() > 0:
-		var chunk = serial.read_string(serial.bytes_available())
+	if serial and serial.is_open() and serial.bytes_avaialable() >0:
+		var bytes = serial.read(serial.bytes_available())
+		var chunk = bytes.get_string_from_utf8()
 		buffer += chunk
 		if "\n" in buffer:
 			var lines = buffer.split("\n")
