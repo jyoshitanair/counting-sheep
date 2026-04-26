@@ -5,6 +5,7 @@ const JUMP_VELOCITY = -400.0
 @onready var raycast: RayCast2D = $RayCast2D
 @onready var detection: Area2D = $detection
 var direction = Vector2.LEFT
+@onready var evil: AnimatedSprite2D = $AnimatedSprite2D
 
 func _ready() -> void:
 	player=get_tree().get_first_node_in_group("player")
@@ -21,14 +22,18 @@ func _physics_process(delta: float) -> void:
 				var s = sign(player.global_position.y-global_position.y)
 				if s==1:
 					direction=Vector2.UP
+					evil.play("up")
 				if s==-1:
 					direction=Vector2.DOWN
+					evil.play("down")
 			if direction==Vector2.UP or direction==Vector2.DOWN:
 				var x = sign(player.global_position.x-global_position.x)
 				if x==1:
 					direction=Vector2.RIGHT
+					evil.play("right")
 				if x==-1:
 					direction=Vector2.LEFT
+					evil.play("left")
 				
 		else:
 			velocity=lerp(velocity, direction*SPEED, delta*10)
