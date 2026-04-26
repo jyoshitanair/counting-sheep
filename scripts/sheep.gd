@@ -2,7 +2,7 @@ extends CharacterBody2D
 var direction = Vector2(-1,0)
 var alive = true
 var score = 0
-const speed = 3000
+const speed = 12000
 var tree
 
 # Called when the node enters the scene tree for the first time.

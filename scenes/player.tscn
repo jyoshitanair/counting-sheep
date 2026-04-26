@@ -77,7 +77,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="player" type="CharacterBody2D" unique_id=83584467 groups=["enemy"]]
+[node name="player" type="CharacterBody2D" unique_id=83584467 groups=["enemy", "player_main"]]
+collision_layer = 3
 script = ExtResource("1_3vyb7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1033195265]
