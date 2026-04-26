@@ -1,4 +1,4 @@
-extends CollisionShape2D
+extends Area2D
 
 
 @onready var collide: CollisionShape2D = $CollisionShape2D
