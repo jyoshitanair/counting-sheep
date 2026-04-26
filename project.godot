@@ -19,7 +19,6 @@ config/icon="res://icon.svg"
 
 Secrets="*uid://dmrapmgclm8aa"
 Manager="*uid://cmy5ppe13dovi"
-Music="*uid://dwr12j6xha5np"
 SilentWolf="*uid://cqs5mjrk4ckmn"
 
 [editor_plugins]
