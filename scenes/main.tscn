@@ -52,15 +52,15 @@ position = Vector2(559, 235)
 [node name="tobeornottobe" parent="." unique_id=42209921 instance=ExtResource("4_jyhfs")]
 
 [node name="summoners" parent="." unique_id=617399 instance=ExtResource("6_tefeu")]
-position = Vector2(288, 62)
+position = Vector2(946, 58)
 
 [node name="starss" type="Node2D" parent="." unique_id=536570856]
 
 [node name="star" parent="starss" unique_id=1556527599 instance=ExtResource("5_tbgi4")]
-position = Vector2(101, 186)
+position = Vector2(855, 346)
 
 [node name="star2" parent="starss" unique_id=1500762032 instance=ExtResource("5_tbgi4")]
-position = Vector2(300, 181)
+position = Vector2(467, 173)
 
 [node name="star3" parent="starss" unique_id=1711163872 instance=ExtResource("5_tbgi4")]
-position = Vector2(466, 208)
+position = Vector2(284, 487)
