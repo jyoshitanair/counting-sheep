@@ -1,5 +1,5 @@
-
-extends Node2D
+@tool
+extends EditorPlugin
 
 func _enter_tree():
 	print("GdSerial plugin activated")
