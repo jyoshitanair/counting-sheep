@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cwfd13a3pgmcu" path="res://scenes/enemy.tscn" id="3_sugp2"]
 [ext_resource type="PackedScene" uid="uid://hbciwvbupwfo" path="res://scenes/tobeornottobe.tscn" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://d02dbbrovdxv8" path="res://scenes/STAR.tscn" id="5_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://ccyabhruuu8ws" path="res://scenes/summoners.tscn" id="6_tefeu"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jyhfs"]
 normal = Vector2(0.018178813, 0.9998348)
@@ -26,7 +27,7 @@ distance = -535.55945
 [node name="world" parent="." unique_id=1846603618 instance=ExtResource("1_sugp2")]
 
 [node name="sheep" parent="." unique_id=1507686613 instance=ExtResource("2_sugp2")]
-position = Vector2(168, 205)
+position = Vector2(22, 260)
 
 [node name="boundaries" type="StaticBody2D" parent="." unique_id=929530660]
 position = Vector2(536, -21)
@@ -46,9 +47,20 @@ shape = SubResource("WorldBoundaryShape2D_tefeu")
 shape = SubResource("WorldBoundaryShape2D_o6xl0")
 
 [node name="enemy" parent="." unique_id=1179791671 instance=ExtResource("3_sugp2")]
-position = Vector2(613, 230)
+position = Vector2(559, 235)
 
 [node name="tobeornottobe" parent="." unique_id=42209921 instance=ExtResource("4_jyhfs")]
 
-[node name="star" parent="." unique_id=1556527599 instance=ExtResource("5_tbgi4")]
-position = Vector2(186, 186)
+[node name="summoners" parent="." unique_id=617399 instance=ExtResource("6_tefeu")]
+position = Vector2(288, 62)
+
+[node name="starss" type="Node2D" parent="." unique_id=536570856]
+
+[node name="star" parent="starss" unique_id=1556527599 instance=ExtResource("5_tbgi4")]
+position = Vector2(101, 186)
+
+[node name="star2" parent="starss" unique_id=1500762032 instance=ExtResource("5_tbgi4")]
+position = Vector2(300, 181)
+
+[node name="star3" parent="starss" unique_id=1711163872 instance=ExtResource("5_tbgi4")]
+position = Vector2(466, 208)

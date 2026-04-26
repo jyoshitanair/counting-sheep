@@ -9,9 +9,11 @@ func _ready() -> void:
 func _on_body_entered(body:Node2D) -> void:
 	if body.is_in_group("player") and body.alive:
 		Manager.score +=1
+		print("hii")
 		call_deferred("_disabled_collision")
 func _disabled_collision()-> void:
 	collide.disabled = true 
+	queue_free()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
