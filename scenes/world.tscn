@@ -8,10 +8,12 @@ texture = ExtResource("1_nnsk1")
 6:3/0 = 0
 6:9/size_in_atlas = Vector2i(3, 3)
 6:9/0 = 0
+6:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:6/size_in_atlas = Vector2i(3, 3)
 3:6/0 = 0
 6:0/size_in_atlas = Vector2i(3, 3)
 6:0/0 = 0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 9:3/size_in_atlas = Vector2i(3, 3)
 9:3/0 = 0
 12:9/size_in_atlas = Vector2i(3, 3)
@@ -20,6 +22,7 @@ texture = ExtResource("1_nnsk1")
 3:12/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_4wyf3"]
+physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_rwgxs")
 
 [node name="world" type="Node2D" unique_id=1846603618]
