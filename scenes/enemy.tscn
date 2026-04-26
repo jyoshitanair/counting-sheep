@@ -14,10 +14,10 @@
 [ext_resource type="Texture2D" uid="uid://dtpq40aepbb08" path="res://assets/images/frames/wolf_up2.png" id="12_rogs8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ra3w"]
-size = Vector2(31, 55)
+size = Vector2(31, 42)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_md0e3"]
-size = Vector2(29, 68)
+size = Vector2(16, 24)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_md0e3"]
 animations = [{
@@ -76,11 +76,11 @@ animations = [{
 script = ExtResource("1_md0e3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=655540245]
-position = Vector2(212, 50)
+position = Vector2(49.5, 51)
 shape = SubResource("RectangleShape2D_4ra3w")
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=559925075]
-position = Vector2(236, 62)
+position = Vector2(50, 51)
 target_position = Vector2(0, 114)
 collision_mask = 2
 collide_with_areas = true
@@ -89,12 +89,12 @@ script = ExtResource("1_7p1mj")
 [node name="detection" type="Area2D" parent="." unique_id=159776972]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detection" unique_id=2087568191]
-position = Vector2(242, 55)
+position = Vector2(73, 51)
 shape = SubResource("RectangleShape2D_md0e3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1310728130]
-position = Vector2(216.99998, 68.00001)
-scale = Vector2(0.2297945, 0.21686645)
+position = Vector2(44, 59)
+scale = Vector2(0.12568493, 0.1369863)
 sprite_frames = SubResource("SpriteFrames_md0e3")
 animation = &"down"
 

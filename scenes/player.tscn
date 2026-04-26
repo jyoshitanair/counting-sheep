@@ -15,8 +15,8 @@
 [ext_resource type="Texture2D" uid="uid://bbne5sgbud44r" path="res://assets/images/frames/bun_up3.png" id="13_l71n6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jej6c"]
-radius = 124.8172
-height = 249.6344
+radius = 51.815575
+height = 136.71251
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ke2ow"]
 animations = [{
@@ -82,7 +82,7 @@ collision_layer = 3
 script = ExtResource("1_3vyb7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1033195265]
-position = Vector2(93, -53.999992)
+position = Vector2(3, -6.999999)
 rotation = -0.7487463
 scale = Vector2(0.3, 0.3)
 skew = -0.06283186
@@ -92,7 +92,6 @@ shape = SubResource("CapsuleShape2D_jej6c")
 scale = Vector2(0.1, 0.1)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D" unique_id=1255392553]
-position = Vector2(820, -500)
-scale = Vector2(1.8732874, 1.9863014)
+position = Vector2(-3.0517578e-05, -20.000015)
 sprite_frames = SubResource("SpriteFrames_ke2ow")
-animation = &"down"
+animation = &"right"
