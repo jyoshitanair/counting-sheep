@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cgakm5utdg24a"]
 
 [ext_resource type="PackedScene" uid="uid://clrt62i2vkoqa" path="res://scenes/background.tscn" id="1_0wfyh"]
-[ext_resource type="PackedScene" uid="uid://dcay6yyi1un6k" path="res://scenes/player.tscn" id="2_sugp2"]
+[ext_resource type="PackedScene" uid="uid://brdh3mgen2810" path="res://scenes/player.tscn" id="2_sugp2"]
 [ext_resource type="PackedScene" uid="uid://cwfd13a3pgmcu" path="res://scenes/enemy.tscn" id="3_sugp2"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jyhfs"]
@@ -27,7 +27,7 @@ position = Vector2(8, 2)
 [node name="sheep" parent="." unique_id=1507686613 instance=ExtResource("2_sugp2")]
 position = Vector2(168, 205)
 
-[node name="boundaries" type="Area2D" parent="." unique_id=1646515358]
+[node name="boundaries" type="StaticBody2D" parent="." unique_id=929530660]
 position = Vector2(536, -21)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="boundaries" unique_id=1248069086]
