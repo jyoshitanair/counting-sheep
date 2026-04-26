@@ -11,32 +11,30 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	if player and player.alive and raycast.can_see:
-	# check wall, then chase, if wall - turn
-		var starts = detection.get_overlapping_bodies()
-		
-		for e in starts:
-			if e.is_in_group("tiles"):
-				if direction==Vector2.LEFT or direction==Vector2.RIGHT:
-					var s = sign(player.global_position.y)
-					if s==1:
-						direction==Vector2.UP
-					if s==-1:
-						direction==Vector2.DOWN
-				if direction==Vector2.UP or direction==Vector2.DOWN:
-					var x = sign(player.global_position.x)
-					if x==1:
-						direction==Vector2.RIGHT
-					if x==-1:
-						direction==Vector2.LEFT
-					
-				#velocity=lerp(velocity, direction*SPEED, delta*10)
-				#move_and_slide()
+		var to_player = (player.global_position-global_position).normalized()
+		velocity = lerp(velocity, to_player * SPEED, delta * 10)
+		# check wall, then chase, if wall - turn
+	var starts = detection.get_overlapping_bodies()
+	for e in starts:
+		if e.is_in_group("tiles"):
+			if direction==Vector2.LEFT or direction==Vector2.RIGHT:
+				var s = sign(player.global_position.y-global_position.y)
+				if s==1:
+					direction=Vector2.UP
+				if s==-1:
+					direction=Vector2.DOWN
+			if direction==Vector2.UP or direction==Vector2.DOWN:
+				var x = sign(player.global_position.x-global_position.x)
+				if x==1:
+					direction=Vector2.RIGHT
+				if x==-1:
+					direction=Vector2.LEFT
 				
 			else:
-				velocity=lerp(velocity, player.global_position, delta*10)
+				velocity=lerp(velocity, direction*SPEED, delta*10)
 				
+			move_and_slide()
 				
-				move_and_slide()
 					
 				
 				
