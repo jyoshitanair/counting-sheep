@@ -1,5 +1,5 @@
 extends CharacterBody2D
-var player 
+var player
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 @onready var raycast: RayCast2D = $RayCast2D
@@ -21,21 +21,19 @@ func _physics_process(delta: float) -> void:
 					if s==1:
 						direction==Vector2.UP
 					if s==-1:
-						direction==Vector2.DOWN 
-					
-					
-				
-				
-					
+						direction==Vector2.DOWN
 				if direction==Vector2.UP or direction==Vector2.DOWN:
 					var x = sign(player.global_position.x)
 					if x==1:
 						direction==Vector2.RIGHT
 					if x==-1:
 						direction==Vector2.LEFT
-						
+					
+				#velocity=lerp(velocity, direction*SPEED, delta*10)
+				#move_and_slide()
+				
 			else:
-				velocity=lerp(velocity, direction*SPEED, delta*10)
+				velocity=lerp(velocity, player.global_position, delta*10)
 				
 				
 				move_and_slide()

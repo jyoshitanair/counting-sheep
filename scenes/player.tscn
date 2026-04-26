@@ -1,25 +1,19 @@
-[gd_scene format=3 uid="uid://brdh3mgen2810"]
+[gd_scene format=3 uid="uid://dcay6yyi1un6k"]
 
 [ext_resource type="Script" uid="uid://bucfglsmhnutq" path="res://scripts/sheep.gd" id="1_3vyb7"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_gw4f6"]
-radius = 134.71451
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_t8l8v"]
-radius = 93.34345
+[sub_resource type="CircleShape2D" id="CircleShape2D_3vyb7"]
+radius = 30.016663
 
 [node name="player" type="CharacterBody2D" unique_id=83584467 groups=["enemy"]]
 script = ExtResource("1_3vyb7")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1865529145]
-position = Vector2(-1, -1)
-shape = SubResource("CircleShape2D_gw4f6")
 
 [node name="area" type="Area2D" parent="." unique_id=1860090950 groups=["player_main"]]
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area" unique_id=615281061]
-shape = SubResource("CircleShape2D_t8l8v")
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_3vyb7")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1751229892]
 offset_left = -20.0
