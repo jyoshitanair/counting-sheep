@@ -11,19 +11,20 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta) -> void:
 	if alive:
-		if Input.is_action_just_pressed("space"):
+		if Input.is_action_just_pressed("clicker"):
 			alive = false
 		if Input.is_action_pressed("up"):
-			print("up")
 			direction = Vector2(0,-1)
-			
+			print("up")
 		if Input.is_action_pressed("down"):
-			print("down")
 			direction = Vector2(0,1)
+			print("down")
 		if Input.is_action_pressed("left"):
 			direction = Vector2(-1,0)
+			print("left")
 		if Input.is_action_pressed("right"):
 			direction = Vector2(1,0)
+			print("right")
 		velocity = direction*speed*delta
 		move_and_slide()
 	else:
