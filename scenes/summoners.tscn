@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://st7a6w4c67vq" path="res://assets/images/sheep.png" id="2_prqda"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_af2vk"]
+<<<<<<< HEAD
 radius = 57.00877
 
 [node name="summoners" type="Area2D" unique_id=1685165481]
@@ -16,6 +17,20 @@ shape = SubResource("CircleShape2D_af2vk")
 [node name="Sheep" type="Sprite2D" parent="." unique_id=1356615375]
 position = Vector2(120.000015, -34)
 scale = Vector2(0.4219178, 0.37534246)
+=======
+radius = 13.892444
+
+[node name="summoners" type="Area2D" unique_id=1124254019]
+script = ExtResource("1_t80hu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1785319319]
+position = Vector2(31, 21)
+shape = SubResource("CircleShape2D_af2vk")
+
+[node name="Sheep" type="Sprite2D" parent="." unique_id=1356615375]
+position = Vector2(33.0625, 30.5)
+scale = Vector2(0.10119863, 0.09178083)
+>>>>>>> 5fbe5458712d8960b11d60ed5c385afb67473768
 texture = ExtResource("2_prqda")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

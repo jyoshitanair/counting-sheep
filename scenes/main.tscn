@@ -3,9 +3,14 @@
 [ext_resource type="PackedScene" uid="uid://cdy01bc8a8eer" path="res://scenes/world.tscn" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://brdh3mgen2810" path="res://scenes/player.tscn" id="2_sugp2"]
 [ext_resource type="PackedScene" uid="uid://cwfd13a3pgmcu" path="res://scenes/enemy.tscn" id="3_sugp2"]
+<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://ccyabhruuu8ws" path="res://scenes/summoners.tscn" id="5_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://d02dbbrovdxv8" path="res://scenes/STAR.tscn" id="5_tefeu"]
 [ext_resource type="AudioStream" uid="uid://buk7llaa7qw7" path="res://assets/images/music/music.wav" id="6_tefeu"]
+=======
+[ext_resource type="PackedScene" uid="uid://ccyabhruuu8ws" path="res://scenes/summoners.tscn" id="4_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://nqp6gbfa8put" path="res://scenes/STAR.tscn" id="5_tefeu"]
+>>>>>>> 5fbe5458712d8960b11d60ed5c385afb67473768
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jyhfs"]
 normal = Vector2(0.018178813, 0.9998348)
@@ -47,6 +52,7 @@ shape = SubResource("WorldBoundaryShape2D_tefeu")
 shape = SubResource("WorldBoundaryShape2D_o6xl0")
 
 [node name="enemy" parent="." unique_id=1179791671 instance=ExtResource("3_sugp2")]
+<<<<<<< HEAD
 position = Vector2(440, 480)
 
 [node name="stars" type="Node2D" parent="." unique_id=1563964792]
@@ -69,3 +75,22 @@ position = Vector2(200, 588)
 stream = ExtResource("6_tefeu")
 autoplay = true
 playback_type = 1
+=======
+position = Vector2(616, 302)
+
+[node name="sheepsss" type="Node2D" parent="." unique_id=1338231214]
+
+[node name="summoners" parent="sheepsss" unique_id=617399 instance=ExtResource("4_tbgi4")]
+position = Vector2(293, 382)
+
+[node name="Node2D" type="Node2D" parent="." unique_id=764342678]
+
+[node name="star" parent="Node2D" unique_id=1556527599 instance=ExtResource("5_tefeu")]
+position = Vector2(333, 93.00001)
+
+[node name="star2" parent="Node2D" unique_id=995200240 instance=ExtResource("5_tefeu")]
+position = Vector2(954, 87)
+
+[node name="star3" parent="Node2D" unique_id=2121999295 instance=ExtResource("5_tefeu")]
+position = Vector2(477.00006, 410)
+>>>>>>> 5fbe5458712d8960b11d60ed5c385afb67473768
