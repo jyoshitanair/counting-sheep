@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dcay6yyi1un6k"]
+[gd_scene format=3 uid="uid://brdh3mgen2810"]
 
 [ext_resource type="Script" uid="uid://bucfglsmhnutq" path="res://scripts/sheep.gd" id="1_3vyb7"]
 [ext_resource type="Texture2D" uid="uid://b3a20ah5p2u85" path="res://assets/images/frames/bun_down1.png" id="2_jej6c"]
@@ -76,6 +76,10 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jej6c"]
+radius = 210.0
+height = 448.0
+
 [node name="player" type="CharacterBody2D" unique_id=83584467 groups=["enemy"]]
 script = ExtResource("1_3vyb7")
 
@@ -95,5 +99,9 @@ offset_bottom = 19.0
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1255392553]
 sprite_frames = SubResource("SpriteFrames_ke2ow")
 animation = &"right"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D" unique_id=1033195265]
+position = Vector2(32, -46)
+shape = SubResource("CapsuleShape2D_jej6c")
 
 [connection signal="mouse_entered" from="area" to="." method="_on_area_2d_mouse_entered"]
