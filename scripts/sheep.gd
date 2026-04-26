@@ -4,6 +4,7 @@ var alive = true
 var score = 0
 const speed = 12000
 var tree
+@onready var sprite: AnimatedSprite2D = $Node2D/AnimatedSprite2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,20 +12,24 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta) -> void:
 	if alive:
-		if Input.is_action_just_pressed("clicker"):
+		if Input.is_action_just_pressed("space"):
 			alive = false
 		if Input.is_action_pressed("up"):
-			direction = Vector2(0,-1)
 			print("up")
+			direction = Vector2(0,-1)
+			sprite.play("up")
+			
+			
 		if Input.is_action_pressed("down"):
-			direction = Vector2(0,1)
 			print("down")
+			direction = Vector2(0,1)
+			sprite.play("down")
 		if Input.is_action_pressed("left"):
 			direction = Vector2(-1,0)
-			print("left")
+			sprite.play("left")
 		if Input.is_action_pressed("right"):
 			direction = Vector2(1,0)
-			print("right")
+			sprite.play("right")
 		velocity = direction*speed*delta
 		move_and_slide()
 	else:
