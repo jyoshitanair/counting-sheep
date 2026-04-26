@@ -57,7 +57,5 @@ func process_serial_data(data: String):
 		Input.action_press("clicker") 
 	else:
 		Input.action_release("clicker") 
-	print(x) 
-	print(y) 
-	print(b)
+	
 		
