@@ -1,6 +1,6 @@
 extends CharacterBody2D
 var player
-const SPEED = 300.0
+const SPEED = 150.0
 const JUMP_VELOCITY = -400.0
 @onready var raycast: RayCast2D = $RayCast2D
 @onready var detection: Area2D = $detection
@@ -30,15 +30,9 @@ func _physics_process(delta: float) -> void:
 				if x==-1:
 					direction=Vector2.LEFT
 				
-			else:
-				velocity=lerp(velocity, direction*SPEED, delta*10)
-				
-			move_and_slide()
-				
-					
-				
-				
-				
-				
-				
-		
+		else:
+			velocity=lerp(velocity, direction*SPEED, delta*10)
+	move_and_slide()
+func _on_detection_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player_main"):
+		player.alive = false

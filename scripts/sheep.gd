@@ -32,7 +32,7 @@ func _physics_process(delta) -> void:
 
 		SilentWolf.Scores.save_score(Manager.player_name, Manager.score).sw_save_score_complete
 		call_deferred("submit")
-		
+	
 func submit() -> void:
 	if not is_inside_tree():
 		return
