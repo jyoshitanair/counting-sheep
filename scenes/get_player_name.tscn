@@ -4,6 +4,7 @@
 [ext_resource type="FontFile" uid="uid://dd67wlv2t60it" path="res://assets/fonts/Sour_Gummy/SourGummy-VariableFont_wdth,wght.ttf" id="2_qbrse"]
 [ext_resource type="Texture2D" uid="uid://57whivr16vmb" path="res://assets/images/button.png" id="3_8bbpk"]
 [ext_resource type="Texture2D" uid="uid://24p85x17dnwu" path="res://assets/images/hover_button.png" id="4_646vy"]
+[ext_resource type="Script" uid="uid://d3yvcu63oagcc" path="res://addons/Godot-Onscreen-Keyboard-0bc9a151e15c4c7482e55d07368476390f88beba/addons/onscreenkeyboard/onscreen_keyboard.gd" id="4_t02p8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_peuhc"]
 bg_color = Color(1, 1, 1, 1)
@@ -52,7 +53,6 @@ offset_left = 385.0
 offset_top = 387.0
 offset_right = 680.0
 offset_bottom = 425.0
-mouse_filter = 1
 theme_override_colors/font_color = Color(1, 0.7529412, 0.8392157, 1)
 theme_override_colors/font_placeholder_color = Color(0.8431842, 0.84318376, 0.84318376, 0.76862746)
 theme_override_fonts/font = ExtResource("2_qbrse")
@@ -62,6 +62,16 @@ placeholder_text = "Name"
 alignment = 1
 max_length = 15
 drag_and_drop_selection_enabled = false
+
+[node name="OnscreenKeyboard" type="PanelContainer" parent="." unique_id=1834027883]
+visible = false
+layout_mode = 0
+offset_left = -4.0
+offset_top = 458.0
+offset_right = 1147.0
+offset_bottom = 657.0
+script = ExtResource("4_t02p8")
+metadata/_custom_type_script = "uid://d3yvcu63oagcc"
 
 [node name="Node2D" type="Node2D" parent="." unique_id=647012677]
 scale = Vector2(0.1, 0.1)

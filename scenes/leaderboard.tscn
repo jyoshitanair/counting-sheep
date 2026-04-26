@@ -6,9 +6,9 @@
 
 [sub_resource type="Theme" id="Theme_8lgqg"]
 default_font = ExtResource("2_y1kwj")
-default_font_size = 20
+default_font_size = 30
 
-[node name="Control" type="Control" unique_id=243708577]
+[node name="Control2" type="Control" unique_id=243708577]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -30,10 +30,11 @@ offset_top = 14.0
 offset_right = 274.0
 offset_bottom = 66.0
 grow_horizontal = 2
-theme_override_constants/separation = 120
+theme_override_constants/separation = 140
 
 [node name="Label" type="Label" parent="HBoxContainer" unique_id=1919554360]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_y1kwj")
 theme_override_font_sizes/font_size = 40
 text = "Rank"
@@ -42,6 +43,7 @@ vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="HBoxContainer" unique_id=205032335]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_y1kwj")
 theme_override_font_sizes/font_size = 40
 text = "Name"
@@ -50,6 +52,7 @@ vertical_alignment = 1
 
 [node name="Label3" type="Label" parent="HBoxContainer" unique_id=623150587]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_y1kwj")
 theme_override_font_sizes/font_size = 40
 text = "Score"
