@@ -37,6 +37,3 @@ func submit() -> void:
 	if not is_inside_tree():
 		return
 	get_tree().change_scene_to_file("res://scenes/leaderboard.tscn")
-
-func _on_area_2d_mouse_entered() -> void:
-	print("hello")

@@ -14,8 +14,9 @@
 [ext_resource type="Texture2D" uid="uid://bdw53vqoah6fs" path="res://assets/images/frames/bun_up2.png" id="12_4ni07"]
 [ext_resource type="Texture2D" uid="uid://bbne5sgbud44r" path="res://assets/images/frames/bun_up3.png" id="13_l71n6"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_3vyb7"]
-radius = 30.016663
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jej6c"]
+radius = 94.82396
+height = 189.64792
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ke2ow"]
 animations = [{
@@ -76,32 +77,20 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jej6c"]
-radius = 210.0
-height = 448.0
-
 [node name="player" type="CharacterBody2D" unique_id=83584467 groups=["enemy"]]
 script = ExtResource("1_3vyb7")
 
-[node name="area" type="Area2D" parent="." unique_id=1860090950 groups=["player_main"]]
-collision_layer = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="area" unique_id=615281061]
-position = Vector2(0, -1)
-shape = SubResource("CircleShape2D_3vyb7")
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1751229892]
-offset_left = -20.0
-offset_top = -21.0
-offset_right = 20.0
-offset_bottom = 19.0
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1255392553]
-sprite_frames = SubResource("SpriteFrames_ke2ow")
-animation = &"right"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D" unique_id=1033195265]
-position = Vector2(32, -46)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1033195265]
+position = Vector2(9.6, -13.8)
+rotation = -0.7487463
+scale = Vector2(0.3, 0.3)
+skew = -0.06283186
 shape = SubResource("CapsuleShape2D_jej6c")
 
-[connection signal="mouse_entered" from="area" to="." method="_on_area_2d_mouse_entered"]
+[node name="Node2D" type="Node2D" parent="." unique_id=316244010]
+scale = Vector2(0.15, 0.15)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D" unique_id=1255392553]
+position = Vector2(33.333332, -39.999996)
+sprite_frames = SubResource("SpriteFrames_ke2ow")
+animation = &"right"
