@@ -100,7 +100,7 @@ offset_bottom = 19.0
 sprite_frames = SubResource("SpriteFrames_ke2ow")
 animation = &"right"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D" unique_id=1033195265]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1033195265]
 position = Vector2(32, -46)
 shape = SubResource("CapsuleShape2D_jej6c")
 
