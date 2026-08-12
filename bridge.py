@@ -3,7 +3,6 @@ import socket
 
 ser = serial.Serial("COM3", 9600, timeout=1)
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-
 while True:
     line = ser.readline().decode("ascii", errors="ignore").strip()
     if line:

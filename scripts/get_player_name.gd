@@ -1,7 +1,7 @@
 extends Control
 
 var loaded = false
-@onready var line_edit: LineEdit = $LineEdit
+@onready var line_edit: LineEdit = $LineEdit2
 @onready var button: TextureButton = $Node2D/TextureButton
 @onready var label: Label = $Node2D/TextureButton/Label
 @onready var fail: Label = $Label
@@ -32,8 +32,8 @@ func check_name()-> bool:
 	for score_data in SilentWolf.Scores.scores:
 		if score_data["player_name"].strip_edges().to_lower() == line_edit.text.strip_edges().to_lower():
 			return true
-	return false
 	fail.text = "Name already in use"
+	return false
 
 func _on_timer_timeout() -> void:
 	fail.hide()

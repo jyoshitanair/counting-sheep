@@ -14,9 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://bdw53vqoah6fs" path="res://assets/images/frames/bun_up2.png" id="12_4ni07"]
 [ext_resource type="Texture2D" uid="uid://bbne5sgbud44r" path="res://assets/images/frames/bun_up3.png" id="13_l71n6"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jej6c"]
-radius = 96.23944
-height = 284.94238
+[sub_resource type="CircleShape2D" id="CircleShape2D_jej6c"]
+radius = 66.61228
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ke2ow"]
 animations = [{
@@ -30,7 +29,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("4_oprun")
 }],
-"loop": true,
+"loop": 1,
 "name": &"down",
 "speed": 5.0
 }, {
@@ -44,7 +43,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("7_fulsm")
 }],
-"loop": true,
+"loop": 1,
 "name": &"left",
 "speed": 5.0
 }, {
@@ -58,7 +57,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("10_i4ail")
 }],
-"loop": true,
+"loop": 1,
 "name": &"right",
 "speed": 5.0
 }, {
@@ -72,7 +71,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("13_l71n6")
 }],
-"loop": true,
+"loop": 1,
 "name": &"up",
 "speed": 5.0
 }]
@@ -82,11 +81,11 @@ collision_layer = 3
 script = ExtResource("1_3vyb7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1033195265]
-position = Vector2(132, -104.00001)
+position = Vector2(133.00002, -98.999985)
 rotation = -0.7487463
 scale = Vector2(0.3, 0.3)
 skew = -0.06283186
-shape = SubResource("CapsuleShape2D_jej6c")
+shape = SubResource("CircleShape2D_jej6c")
 
 [node name="Node2D" type="Node2D" parent="." unique_id=316244010]
 scale = Vector2(0.1, 0.1)
